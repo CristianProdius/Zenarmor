@@ -34,7 +34,7 @@ export default function Hero() {
                 </p>
 
                 <form className="flex border border-white/15 rounded-full mt-8 p-2 max-w-lg mx-auto">
-                    <input type="email" placeholder="Enter your email" className="bg-transparent md:px-2 lg:px-4 md:flex-1" />
+                    <input type="email" placeholder="Enter your email" className="bg-transparent px-4 md:flex-1 w-full" />
                     <Button 
                         type="submit" 
                         variant="primary" 
