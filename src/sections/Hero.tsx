@@ -6,12 +6,12 @@ import Pointer from "@/components/Pointer";
 
 export default function Hero() {
     return (
-        <main className="py-14 lg:py-24 overflow-x-clip">
+        <main className="py-14 lg:py-28 overflow-x-clip">
             <section className="relative container">
                 <div className="absolute -left-32 top-16 hidden lg:block">
                     <Image src={heroImgOne} alt="Home page Image" />
                 </div>
-                <div className="absolute -right-64 -top-16 hidden lg:block">
+                <div className="absolute -right-64 -top-12 hidden lg:block">
                     <Image src={heroImgTwo} alt="Home page Image" />
                 </div>
 

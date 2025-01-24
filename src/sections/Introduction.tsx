@@ -4,7 +4,7 @@ const text = `You're racing to create exceptional work, but traditional design t
 
 export default function Introduction() {
     return (
-        <section className="py-28 lg:py-40">
+        <section className="py-16 lg:py-28">
             <div className="container">
                 <div className="justify-center flex">
                     <Tag className="mb-4">Introducing Layers</Tag>
