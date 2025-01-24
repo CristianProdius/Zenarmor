@@ -49,7 +49,6 @@ export default function Features() {
                                     {Array.from({ length: 3 }).map((_, i) => (
                                         <span key={i} className="size-1.5 rounded-full bg-white inline-flex"></span>
                                     ))}
-
                                 </div>
                             </Avatar>
                         </div>
