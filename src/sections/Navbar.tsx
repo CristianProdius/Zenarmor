@@ -75,8 +75,11 @@ export default function Navbar() {
                                             </a>
                                         ))}
 
+                                        <div className="flex-none space-x-4 md:space-x-0 md:flex">
                                         <Button variant="secondary">Login</Button>
                                         <Button variant="primary">Sign Up</Button>
+                                        </div>
+                                        
                                     </div>
                                 </motion.div>
                             )}
