@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
     { label: "Home", href: "#" },
@@ -38,13 +39,13 @@ export default function Navbar() {
                 <section className="container max-w-5xl">
                     <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
                         <div className="grid grid-cols-2 lg:grid-cols-3 items-center p-2 px-4 md:pr-2">
-                            <div>
+                            <Link href={'/'}>
                                 <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />
-                            </div>
+                            </Link>
                             <div className="lg:flex justify-center items-center hidden">
                                 <nav className="flex gap-6 font-medium">
                                     {navLinks.map((link, index) => (
-                                        <a key={index} href={link.href} className="text-neutral-200 font-medium hover:text-primary-500">
+                                        <a key={index} href={link.href} className="text-neutral-200 font-medium hover:text-primary-500 hover:scale-105 hover:text-lime-500 transition-all">
                                             {link.label}
                                         </a>
                                     ))}
@@ -69,8 +70,8 @@ export default function Navbar() {
                                     <line x1="3" y1="18" x2="21" y2="18" className={twMerge("origin-left transition", isOpen && '-rotate-45 translate-y-1')}></line>
                                 </svg>
                                 
-                                <Button variant="secondary" className="hidden md:inline-flex items-center">Login</Button>
-                                <Button variant="primary" className="hidden md:inline-flex items-center">Sign Up</Button>
+                                <Button variant="secondary" className="hidden md:inline-flex items-center hover:border-transparent transition">Login</Button>
+                                <Button variant="primary" className="hidden md:inline-flex items-center hover:bg-lime-500 transition-colors">Sign Up</Button>
                             </div>
                         </div>
 

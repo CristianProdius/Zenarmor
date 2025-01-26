@@ -1,6 +1,7 @@
 import clsx from "clsx";
+import React from "react";
 
-function FeatureCard(props: { title: string; description: string; children?: React.ReactNode; className?: string; highlighted?: boolean }) {
+const FeatureCard = React.memo((props: { title: string; description: string; children?: React.ReactNode; className?: string; highlighted?: boolean }) => {
     
     const { title, description, children, className, highlighted } = props;
 
@@ -19,7 +20,7 @@ function FeatureCard(props: { title: string; description: string; children?: Rea
             </div>
         </div>
     );
-}
+})
 
 FeatureCard.displayName = "Featured Card"
 export default FeatureCard;

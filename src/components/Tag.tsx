@@ -13,7 +13,7 @@ const pageStyles: Record<NonNullable<TagProps["section"]>, string> = {
     introducing: "tracking-normal text-lime-400",
 };
 
-function Tag({ section, className, children, ...otherProps }: TagProps) {
+const Tag = ({ section, className, children, ...otherProps }: TagProps) => {
     return (
         <div
             className={twMerge(
