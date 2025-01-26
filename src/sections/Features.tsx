@@ -89,6 +89,7 @@ export default function Features() {
                         title="Keyboard Quick Actions" 
                         description="Powerful command to help you to create designs"
                         className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto group"
+                        highlighted
                     >
                         <div className="aspect-video flex items-center justify-center gap-4">
                             <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1">

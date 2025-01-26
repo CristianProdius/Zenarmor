@@ -14,6 +14,20 @@ const navLinks = [
     { label: "FAQs", href: "#faqs" },
 ];
 
+
+const linkVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: index * 0.2,
+            duration: 0.4,
+        },
+    }),
+};
+
+
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -70,9 +84,18 @@ export default function Navbar() {
                                 >
                                     <div className="flex flex-col items-center gap-4 py-4">
                                         {navLinks.map((link, index) => (
-                                            <a href={link.href} key={index}>
+                                            <motion.a
+                                            key={index}
+                                            href={link.href}
+                                            className="text-neutral-200 font-medium hover:text-primary-500"
+                                            custom={index}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="hidden"
+                                            variants={linkVariants}
+                                        >
                                                 {link.label}
-                                            </a>
+                                            </motion.a>
                                         ))}
 
                                         <div className="flex-none space-x-4 md:space-x-0 md:flex">
