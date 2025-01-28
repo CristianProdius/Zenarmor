@@ -120,7 +120,7 @@ const Beams = () => {
     );
 };
 
-const Beam = ({ top, left, transition = {} }: { top: number; left: number; transition?: any }) => {
+const Beam = ({ top, left, transition = {} }: { top: number; left: number;  }) => {
     return (
         <motion.div
             initial={{
