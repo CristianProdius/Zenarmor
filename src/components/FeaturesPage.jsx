@@ -120,7 +120,7 @@ const Beams = () => {
     );
 };
 
-const Beam = ({ top, left, transition = {} }: { top: number; left: number;  }) => {
+const Beam = ({ top, left, transition = {} }) => {
     return (
         <motion.div
             initial={{
@@ -155,15 +155,15 @@ const CodeCard = () => {
     const imageMenuRef = useRef<HTMLDivElement | null>(null);
 
     // User Menu
-    const handleClickOutsideMenu = (event: MouseEvent) => {
-        if (imageMenuRef.current && !imageMenuRef.current.contains(event.target as Node)) {
+    const handleClickOutsideMenu = (event) => {
+        if (imageMenuRef.current && !imageMenuRef.current.contains(event.target)) {
             setShowImageMenu(false);
         }
     };
 
     // Add User Profile
-    const handleClickOutside = (event: MouseEvent) => {
-        if (imageRef.current && !imageRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event) => {
+        if (imageRef.current && event.target instanceof Node && !imageRef.current.contains(event.target)) {
             setShowImage(false);
         }
     };
@@ -305,15 +305,15 @@ const CodeCardRight = () => {
     const imageMenuRef = useRef<HTMLDivElement | null>(null);
 
     // User Menu
-    const handleClickOutsideMenu = (event: MouseEvent) => {
-        if (imageMenuRef.current && !imageMenuRef.current.contains(event.target as Node)) {
+    const handleClickOutsideMenu = (event) => {
+        if (imageMenuRef.current && !imageMenuRef.current.contains(event.target)) {
             setShowImageMenu(false);
         }
     };
 
     // Add User Profile
-    const handleClickOutside = (event: MouseEvent) => {
-        if (imageRef.current && !imageRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event) => {
+        if (imageRef.current && !imageRef.current.contains(event.target)) {
             setShowImage(false);
         }
     };
@@ -446,7 +446,7 @@ const CodeCardRight = () => {
 };
 
 
-const ToggleChip = ({ children, selected, onClick }: { children: React.ReactNode; selected: boolean; onClick: () => void }) => {
+const ToggleChip = ({ children, selected, onClick }) => {
     return (
         <button      
             onClick={onClick}
@@ -457,7 +457,7 @@ const ToggleChip = ({ children, selected, onClick }: { children: React.ReactNode
     );
 };
 
-const Card = ({ className, children }: { className: string; children: React.ReactNode }) => {
+const Card = ({ className, children }) => {
     return (
         <motion.div
             initial={{
@@ -478,7 +478,7 @@ const Card = ({ className, children }: { className: string; children: React.Reac
     );
 };
 
-const Markup = ({ code }: { code: string }) => {
+const Markup = ({ code }) => {
     return (
         <Highlight theme={theme} code={code} language="javascript">
             {({ style, tokens, getLineProps, getTokenProps }) => (
@@ -534,7 +534,7 @@ const theme = {
             types: ["comment"],
             style: {
                 color: "#94a3b8)",
-                fontStyle: "italic" as const,
+                fontStyle: "italic",
             },
         },
         {
@@ -594,7 +594,7 @@ const theme = {
         {
             types: ["keyword"],
             style: {
-                fontStyle: "italic" as const,
+                fontStyle: "italic",
             },
         },
         {
