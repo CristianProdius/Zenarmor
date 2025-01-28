@@ -27,7 +27,7 @@ export default function LogoTicker() {
     return (
         <section className="py-24 overflow-x-clip">
             <div className="container">
-                <h3 className="text-center text-xl text-white/50">Already chosen by these marked companies</h3>
+                <h2 className="text-center text-xl text-white/50">Already chosen by these marked companies</h2>
 
                 <div className="flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                     <motion.div 

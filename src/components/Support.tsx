@@ -38,7 +38,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
     return (
         <div className="w-full max-w-xl space-y-6">
             <div>
-                <p className="mb-1.5 text-2xl font-semibold uppercase">{tag}</p>
+                <p className="mb-1.5 text-3xl font-semibold uppercase">{tag}</p>
                 <hr className="border-neutral-700" />
             </div>
             <p className="max-w-lg text-xl leading-relaxed">{text}</p>
@@ -47,7 +47,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
                 <hr className="border-neutral-300" />
             </div>
 
-            <button className="w-full rounded-full border border-neutral-600 py-2 text-lg font-medium transition-colors hover:bg-lime-400/60 hover:text-neutral-100">
+            <button className="w-full rounded-full border border-neutral-600 py-2 text-xl font-medium transition-colors hover:bg-lime-400/60 hover:text-neutral-100">
                 <Link href={'/contact'} >Contact Support</Link>
             </button>
         </div>

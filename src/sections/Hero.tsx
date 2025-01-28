@@ -88,8 +88,8 @@ export default function Hero() {
                         ✨ $7.5M seed round raised
                     </div>
                 </div>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">Impactful design, created effortlessly</h1>
-                <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium text-center mt-6">Impactful design, created effortlessly</h1>
+                <p className="text-center text-lg md:text-xl text-white/50 mt-8 max-w-2xl mx-auto">
                     Design tools shouldnt slow you down. Layers combines powerfull features 
                     with an intuitive interface that keeps you in your create flow
                 </p>
