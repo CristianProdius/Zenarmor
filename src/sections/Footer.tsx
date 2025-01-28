@@ -10,7 +10,7 @@ const footerLinks = [
 
 export default function Footer() {
     return (
-        <section className="py-16">
+        <section className="py-10">
             <div className="container ">
                 <div className="flex flex-col md:flex-row items-center md:justify-between gap-6">
                     <Link href={'/'}>
