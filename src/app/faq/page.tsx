@@ -1,6 +1,26 @@
 import FaqComponent from '@/components/Faq'
 import React from 'react'
 
+export const metadata = {
+  title: "Layers FAQ Page ",
+  description: "Faq Page for Layers, which provide you with the best questions and answers",
+  openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: "https://jptribe-landing-sass.vercel.app/faq", 
+      title: 'Layers - by NighteCoding',
+      description: 'NighteCoding provides stable and highend solutions',
+      images: [
+          {
+          url: 'https://jptribe-landing-sass.vercel.app/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Landing Sass by NighteCoding',
+          },
+      ],
+  },
+};
+
 const Faq = () => {
   return (
     <main className='py-24'>

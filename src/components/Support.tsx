@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface BlockInTextCardProps {
     tag: string;
@@ -9,9 +10,9 @@ interface BlockInTextCardProps {
     examples: string[];
 }
 
-export const Support = () => {
+export const SupportComponent = () => {
     return (
-        <section className="py-10">
+        <section className="pt-16 pb-10">
             <div className="flex items-center justify-center text-neutral-300">
                 <BlockInTextCard
                     tag="/ Support"
@@ -47,7 +48,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
             </div>
 
             <button className="w-full rounded-full border border-neutral-600 py-2 text-lg font-medium transition-colors hover:bg-lime-400/60 hover:text-neutral-100">
-                Contact Support
+                <Link href={'/contact'} >Contact Support</Link>
             </button>
         </div>
     );
@@ -73,7 +74,7 @@ const Typewrite = ({ examples }: { examples: string[] }) => {
     }, []);
 
     return (
-        <p className="mb-2.5 text-sm font-light uppercase">
+        <p className="mb-2.5 text-base font-light uppercase">
             <span className="inline-block size-2 " />
             <span className="ml-3">
                 EXAMPLE:{" "}

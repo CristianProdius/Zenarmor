@@ -1,5 +1,25 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Layers Integrations Page ",
+    description: "Integrations Page for Layers, offers a visual stunning display and informative describtion",
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://jptribe-landing-sass.vercel.app/integrations", 
+        title: 'Layers - by NighteCoding',
+        description: 'NighteCoding provides stable and highend solutions',
+        images: [
+            {
+            url: 'https://jptribe-landing-sass.vercel.app/og-image.jpg',
+            width: 1200,
+            height: 630,
+            alt: 'Landing Sass by NighteCoding',
+            },
+        ],
+    },
+};
+
 const Integrations = () => {
     return (
         <main className='py-24'>
