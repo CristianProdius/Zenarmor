@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Performance Screenshot
 
-![PageSpeed Insights Mobile](./assets/jptribe-landingSass-PageSpeedMob.png)
+![PageSpeed Insights Mobile](./src/assets/jptribe-landingSass-PageSpeedMob.png)
 
 ## Getting Started
 
