@@ -150,9 +150,9 @@ const Beam = ({ top, left, transition = {} }) => {
 const CodeCard = () => {
     const [selected, setSelected] = useState("js");
     const [showImage, setShowImage] = useState(false);
-    const imageRef = useRef<HTMLDivElement | null>(null);
+    const imageRef = useRef(null);
     const [showImageMenu, setShowImageMenu] = useState(false);
-    const imageMenuRef = useRef<HTMLDivElement | null>(null);
+    const imageMenuRef = useRef(null);
 
     // User Menu
     const handleClickOutsideMenu = (event) => {
@@ -300,9 +300,9 @@ const CodeCard = () => {
 const CodeCardRight = () => {
     const [selected, setSelected] = useState("js");
     const [showImage, setShowImage] = useState(false);
-    const imageRef = useRef<HTMLDivElement | null>(null);
+    const imageRef = useRef(null);
     const [showImageMenu, setShowImageMenu] = useState(false);
-    const imageMenuRef = useRef<HTMLDivElement | null>(null);
+    const imageMenuRef = useRef(null);
 
     // User Menu
     const handleClickOutsideMenu = (event) => {
