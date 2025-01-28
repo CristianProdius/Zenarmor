@@ -1,3 +1,4 @@
+import IntegrationsComponent from '@/components/IntegrationsPage';
 import React from 'react'
 
 export const metadata = {
@@ -22,7 +23,7 @@ export const metadata = {
 
 const Integrations = () => {
     return (
-        <main className='py-24'>
+        <main className='pt-24 pb-14'>
             <section className='text-center'>
                 <h1 className='text-5xl'>Integrations Page</h1>
                 <p className='text-xl max-w-lg mx-auto mt-2'>
@@ -31,7 +32,7 @@ const Integrations = () => {
             </section>
 
             <section>
-            
+                <IntegrationsComponent />
             </section>
         </main>
     )

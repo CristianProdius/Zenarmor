@@ -31,6 +31,10 @@ export default function Footer() {
                         </nav>
                     </div>
                 </div>
+
+                <div className="mt-4 mb-2 md:mb-0 text-center text-xs md:text-sm font-semibold md:font-medium text-white/50">
+                    &copy; {new Date().getFullYear()} made by NighteCoding, free of use.
+                </div>
             </div>
         </section>
     )

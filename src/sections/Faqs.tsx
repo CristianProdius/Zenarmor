@@ -4,6 +4,7 @@ import Tag from "@/components/Tag";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const faqs = [
     {
@@ -99,6 +100,8 @@ export default function Faqs() {
                         </div>
                     ))}
                 </div>
+
+                <Link href={'/faq'} className="flex justify-center mt-6 text-lg hover:underline">All the FAQ</Link>
             </div>
         </section>
     );
