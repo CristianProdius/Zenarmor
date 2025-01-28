@@ -6,6 +6,10 @@ This project is open source and licensed under the **MIT License**. For more det
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Performance Screenshot
+
+![PageSpeed Insights Mobile](./assets/jptribe-landingSass-PageSpeedMob.png)
+
 ## Getting Started
 
 First, run the development server:
