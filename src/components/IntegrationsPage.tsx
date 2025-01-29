@@ -67,7 +67,7 @@ const Tab = ({ selected, Icon, title, setSelected, tabNum }: { selected: boolean
                     <Icon />
                 </span>
                 <span
-                    className={`min-w-[150px] max-w-[200px] text-start text-xs text-slate-600 transition-opacity md:text-center ${
+                    className={`min-w-[150px] max-w-[200px] text-start text-xs md:text-sm text-slate-400 transition-opacity md:text-center ${
                         selected ? "opacity-100" : "opacity-50"
                     }`}
                 >
