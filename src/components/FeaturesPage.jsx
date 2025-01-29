@@ -13,8 +13,8 @@ export const FeaturesComponent = () => {
         <div className="relative overflow-hidden bg-slate-950 text-slate-200">
             <div className="mx-auto max-w-7xl px-4 md:px-8">
                 <section className="relative z-20 pt-14 pb-14 md:pt-16 md:pb-24">
-                    <span className="mx-auto mb-3 block w-fit rounded bg-gradient-to-br from-slate-800 to-slate-950 p-3 text-3xl shadow-md shadow-lime-900">
-                        <FiZap />
+                    <span className="mx-auto mb-3 block w-fit rounded bg-gradient-to-br from-slate-800 to-slate-950 p-3 text-3xl shadow-md shadow-lime-900 group">
+                        <FiZap className="text-lime-400 group-hover:rotate-12 transition" />
                     </span>
                     <h2 className="mb-3 text-center text-3xl font-semibold leading-tight sm:text-5xl">
                         High Performance Features
@@ -150,8 +150,8 @@ const Beam = ({ top, left, transition = {} }) => {
 const CodeCard = () => {
     const [selected, setSelected] = useState("js");
     const [showImage, setShowImage] = useState(false);
-    const imageRef = useRef(null);
     const [showImageMenu, setShowImageMenu] = useState(false);
+    const imageRef = useRef(null);
     const imageMenuRef = useRef(null);
 
     // User Menu
@@ -212,9 +212,9 @@ const CodeCard = () => {
                 <div className="relative md:flex gap-2 space-y-1 md:space-y-0">
                     <button
                         onClick={() => setShowImageMenu(!showImageMenu)}
-                        className={`relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
+                        className={`relative z-0 md:flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
                         bg-gradient-to-br from-slate-800 to-slate-950 px-3 py-1.5
-                        text-xs font-medium text-slate-50
+                        text-xs font-medium text-slate-50 hidden sm:block
                         transition-all duration-300
                         
                         before:absolute before:inset-0
@@ -252,9 +252,9 @@ const CodeCard = () => {
 
                     <button
                         onClick={() => setShowImage(!showImage)}
-                        className={`relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
+                        className={`relative z-0 md:flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
                             bg-gradient-to-br from-slate-800 to-slate-950 px-3 py-1.5
-                            text-xs font-medium text-slate-50
+                            text-xs font-medium text-slate-50 hidden sm:block
                             transition-all duration-300
                             before:absolute before:inset-0
                             before:-z-10 before:translate-y-[200%]
@@ -362,9 +362,9 @@ const CodeCardRight = () => {
                 <div className="relative md:flex gap-2 space-y-1 md:space-y-0">
                     <button
                         onClick={() => setShowImageMenu(!showImageMenu)}
-                        className={`relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
+                        className={`relative z-0 md:flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
                             bg-gradient-to-br from-slate-800 to-slate-950 px-3 py-1.5
-                            text-xs font-medium text-slate-50
+                            text-xs font-medium text-slate-50 hidden sm:block
                             transition-all duration-300
                             before:absolute before:inset-0
                             before:-z-10 before:translate-y-[200%]
@@ -400,9 +400,9 @@ const CodeCardRight = () => {
         
                     <button
                         onClick={() => setShowImage(!showImage)}
-                        className={`relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
+                        className={`relative z-0 md:flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md 
                             bg-gradient-to-br from-slate-800 to-slate-950 px-3 py-1.5
-                            text-xs font-medium text-slate-50
+                            text-xs font-medium text-slate-50 hidden sm:block
                             transition-all duration-300
                             before:absolute before:inset-0
                             before:-z-10 before:translate-y-[200%]
