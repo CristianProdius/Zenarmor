@@ -30,7 +30,7 @@ const RegisterPage = () => {
     return (
         <main className="py-20">
             <section className="container flex items-center justify-center text-white">
-                <div className="w-full max-w-md bg-gray-800 rounded-xl p-8 shadow-lg">
+                <div className="w-full max-w-lg bg-gray-800 rounded-xl p-8 shadow-lg">
                 <div className="flex justify-center mb-6">
                     <Link href={"/"}>
                         <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />

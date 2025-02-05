@@ -1,72 +1,85 @@
 import { create } from "zustand";
 import Cookies from "js-cookie";
 
-// Load users from localStorage if available
+// Load registered users from localStorage
 const loadUsers = () => {
-  if (typeof window !== "undefined") {
-    const users = localStorage.getItem("registeredUsers");
-    return users ? JSON.parse(users) : [];
-  }
-  return [];
+    if (typeof window !== "undefined") {
+        const users = localStorage.getItem("registeredUsers");
+        return users ? JSON.parse(users) : [];
+    }
+    return [];
 };
 
+// Load authentication state from Cookies
+const loadAuthState = () => Cookies.get("isAuthenticated") === "true";
+
 interface AuthState {
-  email: string;
-  password: string;
-  isAuthenticated: boolean;
-  rememberMe: boolean;
-  registeredUsers: { email: string; password: string }[];
-  setEmail: (email: string) => void;
-  setPassword: (password: string) => void;
-  setRememberMe: (remember: boolean) => void;
-  registerUser: (email: string, password: string) => void;
-  deleteUser: (email: string) => void;
-  setIsAuthenticated: (isAuthenticated: boolean) => void;
-  logout: () => void;
+    email: string;
+    password: string;
+    isAuthenticated: boolean;
+    rememberMe: boolean;
+    registeredUsers: { email: string; password: string }[];
+    setEmail: (email: string) => void;
+    setPassword: (password: string) => void;
+    setRememberMe: (remember: boolean) => void;
+    registerUser: (email: string, password: string) => void;
+    deleteUser: (email: string) => void;
+    setIsAuthenticated: (isAuthenticated: boolean) => void;
+    logout: () => void;
 }
 
 const useAuthStore = create<AuthState>((set) => ({
-  email: Cookies.get("rememberMe") === "true" ? Cookies.get("email") || "" : "",
-  password: Cookies.get("rememberMe") === "true" ? Cookies.get("password") || "" : "",
-  isAuthenticated: false,
-  rememberMe: Cookies.get("rememberMe") === "true",
-  registeredUsers: loadUsers(), // Load users from localStorage
+    email: Cookies.get("rememberMe") === "true" ? Cookies.get("email") || "" : "",
+    password: Cookies.get("rememberMe") === "true" ? Cookies.get("password") || "" : "",
+    isAuthenticated: loadAuthState(), // ✅ Load auth state from Cookies
+    rememberMe: Cookies.get("rememberMe") === "true",
+    registeredUsers: loadUsers(), // ✅ Load registered users from localStorage
 
-  setEmail: (email) => set({ email }),
-  setPassword: (password) => set({ password }),
+    setEmail: (email) => set({ email }),
+    setPassword: (password) => set({ password }),
 
-  setRememberMe: (remember) => {
-    set({ rememberMe: remember });
-    if (!remember) {
-      Cookies.remove("email");
-      Cookies.remove("password");
-      Cookies.remove("rememberMe");
-    }
-  },
+    setRememberMe: (remember) => {
+        set({ rememberMe: remember });
+        Cookies.set("rememberMe", remember.toString(), { expires: 7 });
 
-  registerUser: (email, password) =>
-    set((state) => {
-      const updatedUsers = [...state.registeredUsers, { email, password }];
-      localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // Save to localStorage
-      return { registeredUsers: updatedUsers };
-    }),
+        if (!remember) {
+            Cookies.remove("email");
+            Cookies.remove("password");
+            Cookies.remove("rememberMe");
+        }
+    },
 
-  deleteUser: (email) =>
-    set((state) => {
-      const updatedUsers = state.registeredUsers.filter((user) => user.email !== email);
-      localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // Update localStorage
-      return { registeredUsers: updatedUsers };
-    }),
+    registerUser: (email, password) =>
+        set((state) => {
+            const updatedUsers = [...state.registeredUsers, { email, password }];
+            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // ✅ Store in localStorage
+            return { registeredUsers: updatedUsers };
+        }),
 
-  setIsAuthenticated: (isAuthenticated) => set({ isAuthenticated }),
+    deleteUser: (email) =>
+        set((state) => {
+            const updatedUsers = state.registeredUsers.filter((user) => user.email !== email);
+            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // ✅ Update localStorage
+            return { registeredUsers: updatedUsers };
+        }),
 
-  logout: () =>
-    set(() => {
-      Cookies.remove("email");
-      Cookies.remove("password");
-      Cookies.remove("rememberMe");
-      return { email: "", password: "", isAuthenticated: false, rememberMe: false };
-    }),
+    setIsAuthenticated: (isAuthenticated) => {
+        set({ isAuthenticated });
+        if (isAuthenticated) {
+            Cookies.set("isAuthenticated", "true", { expires: 7 }); // ✅ Persist authentication
+        } else {
+            Cookies.remove("isAuthenticated");
+        }
+    },
+
+    logout: () =>
+        set(() => {
+            Cookies.remove("isAuthenticated");
+            Cookies.remove("email");
+            Cookies.remove("password");
+            Cookies.remove("rememberMe");
+            return { email: "", password: "", isAuthenticated: false, rememberMe: false };
+        }),
 }));
 
 export default useAuthStore;
