@@ -2,8 +2,6 @@
 
 This Layer Landing Sass project is under **NighteCoding** and is built using **Next.js**, **TypeScript**, **TailwindCSS**, and **Framer Motion**. 
 
-This project is open source and licensed under the **MIT License**. For more details, see the [LICENSE](./LICENSE) file.
-
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Performance Screenshot

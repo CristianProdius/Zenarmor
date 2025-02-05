@@ -15,7 +15,6 @@ const navLinks = [
     { label: "FAQ", href: "/faq" },
 ];
 
-
 const linkVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: (index: number) => ({
@@ -27,7 +26,6 @@ const linkVariants = {
         },
     }),
 };
-
 
 export default function Navbar() {
 
@@ -70,8 +68,12 @@ export default function Navbar() {
                                     <line x1="3" y1="18" x2="21" y2="18" className={twMerge("origin-left transition", isOpen && '-rotate-45 translate-y-1')}></line>
                                 </svg>
                                 
-                                <Button variant="secondary" className="hidden md:inline-flex items-center hover:border-transparent transition">Login</Button>
-                                <Button variant="primary" className="hidden md:inline-flex items-center hover:bg-lime-500 transition-colors">Sign Up</Button>
+                                <Button variant="secondary" className="hidden md:inline-flex items-center hover:border-transparent transition">
+                                    <Link href={'/login'}>Login</Link>
+                                </Button>
+                                <Button variant="primary" className="hidden md:inline-flex items-center hover:bg-lime-500 transition-colors">
+                                    <Link href={'/register'}>Sign Up</Link>
+                                </Button>
                             </div>
                         </div>
 
