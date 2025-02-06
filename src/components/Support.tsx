@@ -47,7 +47,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
                 <hr className="border-neutral-300" />
             </div>
 
-            <button className="w-full rounded-full border border-neutral-600 py-2 text-xl font-medium transition-colors hover:bg-lime-400/60 hover:text-neutral-100">
+            <button className="w-full rounded-full border border-neutral-600 py-2 text-xl font-medium hover:bg-lime-500 hover:text-neutral-800 transition-colors">
                 <Link href={'/contact'} >Contact Support</Link>
             </button>
         </div>

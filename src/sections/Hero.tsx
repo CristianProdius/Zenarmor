@@ -6,11 +6,15 @@ import heroImgTwo from '@/assets/images/design-example-2.png';
 import Image from "next/image";
 import Pointer from "@/components/Pointer";
 import { motion, useAnimate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import cursorImage from '@/assets/images/cursor-you.svg';
+import useAuthStore from "../app/stores/authStore";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Hero() {
-
+    const { toggleNewsletterSubscription } = useAuthStore();
+    const [email, setEmail] = useState("");
     const [leftDesignScope, leftDesignAnimate] = useAnimate();
     const [leftPointerScope, leftPointerAnimate] = useAnimate();
     const [rightDesignScope, rightDesignAnimate] = useAnimate();
@@ -40,6 +44,19 @@ export default function Hero() {
         ]);
     }, []);
 
+    const handleSubscribe = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!email) {
+            toast.error("Please enter a valid email!");
+            return;
+        }
+
+        // Subscribe to newsletter
+        toggleNewsletterSubscription(email);
+        toast.success("You have subscribed to the monthly newsletter!");
+    };
+
     return (
         <main className="py-16 lg:py-24 overflow-x-clip" style={{ cursor: `url(${cursorImage.src}), auto` }}>
             <section className="relative container">
@@ -47,7 +64,7 @@ export default function Hero() {
                     ref={leftDesignScope} 
                     initial={{ opacity: 0, y: 100, x: -100 }}
                     drag
-                    className="absolute -left-32 top-16 hidden lg:block"
+                    className="absolute -left-32 top-16 hidden lg:block cursor-grab"
                 >
                     <Image 
                         src={heroImgOne} 
@@ -67,7 +84,7 @@ export default function Hero() {
                     ref={rightDesignScope} 
                     initial={{ opacity: 0, x: 100, y: 100 }}
                     drag
-                    className="absolute -right-64 -top-12 hidden lg:block"
+                    className="absolute -right-64 -top-12 hidden lg:block cursor-grab"
                 >
                     <Image 
                         src={heroImgTwo} 
@@ -94,12 +111,18 @@ export default function Hero() {
                     with an intuitive interface that keeps you in your create flow
                 </p>
 
-                <form className="flex border border-white/15 rounded-full mt-8 p-2 max-w-lg mx-auto">
-                    <input type="email" placeholder="Enter your email" className="bg-transparent px-4 md:flex-1 w-full" />
+                <form className="flex border border-white/15 rounded-full mt-8 p-2 max-w-lg mx-auto"  onSubmit={handleSubscribe}>
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        className="bg-transparent px-4 md:flex-1 w-full focus:outline-none" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                     <Button 
                         type="submit" 
                         variant="primary" 
-                        className="whitespace-nowrap"
+                        className="whitespace-nowrap hover:bg-lime-500 transition-colors"
                         size="sm"
                     >
                         Sign up

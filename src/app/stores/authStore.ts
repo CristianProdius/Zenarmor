@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import Cookies from "js-cookie";
 
-// Load registered users from localStorage
 const loadUsers = () => {
     if (typeof window !== "undefined") {
         const users = localStorage.getItem("registeredUsers");
@@ -10,7 +9,6 @@ const loadUsers = () => {
     return [];
 };
 
-// Load authentication state from Cookies
 const loadAuthState = () => Cookies.get("isAuthenticated") === "true";
 
 interface AuthState {
@@ -18,12 +16,13 @@ interface AuthState {
     password: string;
     isAuthenticated: boolean;
     rememberMe: boolean;
-    registeredUsers: { email: string; password: string }[];
+    registeredUsers: { email: string; password: string; newsletterSubscribed?: boolean }[];
     setEmail: (email: string) => void;
     setPassword: (password: string) => void;
     setRememberMe: (remember: boolean) => void;
     registerUser: (email: string, password: string) => void;
     deleteUser: (email: string) => void;
+    toggleNewsletterSubscription: (email: string) => void;
     setIsAuthenticated: (isAuthenticated: boolean) => void;
     logout: () => void;
 }
@@ -31,9 +30,9 @@ interface AuthState {
 const useAuthStore = create<AuthState>((set) => ({
     email: Cookies.get("rememberMe") === "true" ? Cookies.get("email") || "" : "",
     password: Cookies.get("rememberMe") === "true" ? Cookies.get("password") || "" : "",
-    isAuthenticated: loadAuthState(), // ✅ Load auth state from Cookies
+    isAuthenticated: loadAuthState(),
     rememberMe: Cookies.get("rememberMe") === "true",
-    registeredUsers: loadUsers(), // ✅ Load registered users from localStorage
+    registeredUsers: loadUsers(),
 
     setEmail: (email) => set({ email }),
     setPassword: (password) => set({ password }),
@@ -51,22 +50,33 @@ const useAuthStore = create<AuthState>((set) => ({
 
     registerUser: (email, password) =>
         set((state) => {
-            const updatedUsers = [...state.registeredUsers, { email, password }];
-            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // ✅ Store in localStorage
+            const updatedUsers = [...state.registeredUsers, { email, password, newsletterSubscribed: false }];
+            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers));
             return { registeredUsers: updatedUsers };
         }),
 
     deleteUser: (email) =>
         set((state) => {
             const updatedUsers = state.registeredUsers.filter((user) => user.email !== email);
-            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers)); // ✅ Update localStorage
+            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers));
+            return { registeredUsers: updatedUsers };
+        }),
+
+    toggleNewsletterSubscription: (email) =>
+        set((state) => {
+            const updatedUsers = state.registeredUsers.map((user) =>
+                user.email === email
+                    ? { ...user, newsletterSubscribed: !user.newsletterSubscribed }
+                    : user
+            );
+            localStorage.setItem("registeredUsers", JSON.stringify(updatedUsers));
             return { registeredUsers: updatedUsers };
         }),
 
     setIsAuthenticated: (isAuthenticated) => {
         set({ isAuthenticated });
         if (isAuthenticated) {
-            Cookies.set("isAuthenticated", "true", { expires: 7 }); // ✅ Persist authentication
+            Cookies.set("isAuthenticated", "true", { expires: 7 });
         } else {
             Cookies.remove("isAuthenticated");
         }

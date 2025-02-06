@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import useAuthStore from "../app/stores/authStore"; // Import Zustand Store
+import useAuthStore from "../app/stores/authStore";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 
@@ -132,6 +132,13 @@ export default function Navbar() {
                                                 onClick={() => setDropdownOpen(false)}
                                             >
                                                 Profile
+                                            </Link>
+                                            <Link
+                                                href="/auth/news"
+                                                className="block px-4 py-2 text-white hover:bg-gray-700"
+                                                onClick={() => setDropdownOpen(false)}
+                                            >
+                                                Newsletter
                                             </Link>
                                             <button
                                                 onClick={handleLogout}
