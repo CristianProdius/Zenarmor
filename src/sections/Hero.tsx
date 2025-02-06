@@ -51,7 +51,6 @@ export default function Hero() {
             toast.error("Please enter a valid email!");
             return;
         }
-
         // Subscribe to newsletter
         toggleNewsletterSubscription(email);
         toast.success("You have subscribed to the monthly newsletter!");
@@ -111,7 +110,7 @@ export default function Hero() {
                     with an intuitive interface that keeps you in your create flow
                 </p>
 
-                <form className="flex border border-white/15 rounded-full mt-8 p-2 max-w-lg mx-auto"  onSubmit={handleSubscribe}>
+                <form className="flex border border-white/15 rounded-full mt-8 p-2 max-w-lg mx-auto" onSubmit={handleSubscribe}>
                     <input 
                         type="email" 
                         placeholder="Enter your email" 

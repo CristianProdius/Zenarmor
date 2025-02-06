@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/sections/Footer";
 import Navbar from "@/sections/Navbar";
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({
     variable: "--font-inter",
@@ -39,6 +40,17 @@ export default function RootLayout({ children, }: Readonly<{children: React.Reac
                 {children}
                 <Analytics />
                 <Footer />
+                <ToastContainer
+                    position="top-right"
+                    autoClose={3000} 
+                    hideProgressBar 
+                    newestOnTop 
+                    closeOnClick 
+                    rtl={false} 
+                    pauseOnFocusLoss 
+                    draggable 
+                    pauseOnHover
+                />
             </body>
         </html>
     );
