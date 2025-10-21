@@ -2,20 +2,20 @@ import IntegrationsComponent from '@/components/IntegrationsPage';
 import React from 'react'
 
 export const metadata = {
-    title: "Zenarmor Integrations Page ",
-    description: "Integrations Page for Zenarmor, offers a visual stunning display and informative describtion",
+    title: "Platform Integrations - Zenarmor",
+    description: "Deploy Zenarmor anywhere: OPNsense, pfSense, FreeBSD, macOS, Windows, and Ubuntu. Seamless integration with your existing network infrastructure for comprehensive cybersecurity protection.",
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://jptribe-landing-sass.vercel.app/integrations", 
-        title: 'Zenarmor - by Prodius Enterprise',
-        description: 'Prodius Enterprise provides stable and highend solutions',
+        url: "https://zenarmor.com/integrations",
+        title: 'Platform Integrations - Zenarmor',
+        description: 'Deploy Zenarmor on OPNsense, pfSense, FreeBSD, macOS, Windows, and Ubuntu. Flexible deployment options for any network infrastructure.',
         images: [
             {
-            url: 'https://jptribe-landing-sass.vercel.app/og-image.jpg',
+            url: 'https://zenarmor.com/og-image.jpg',
             width: 1200,
             height: 630,
-            alt: 'Landing Sass by Prodius Enterprise',
+            alt: 'Zenarmor Platform Integrations',
             },
         ],
     },
@@ -25,9 +25,9 @@ const Integrations = () => {
     return (
         <main className='pt-24 pb-14'>
             <section className='text-center'>
-                <h1 className='text-5xl'>Integrations Page</h1>
-                <p className='text-xl max-w-lg mx-auto mt-2'>
-                    At <span className='text-brand-mustard'>Zenarmor</span> we provide the best <span className='text-brand-mustard'>integrations</span> for your needs
+                <h1 className='text-5xl font-medium text-brand-navy'>Platform <span className='text-brand-mustard'>Integrations</span></h1>
+                <p className='text-xl max-w-2xl mx-auto mt-4 text-brand-neutral'>
+                    Deploy <span className='text-brand-mustard font-medium'>Zenarmor</span> seamlessly across multiple platforms. From enterprise firewalls to personal devices, protect your network <span className='text-brand-mustard font-medium'>anywhere</span>.
                 </p>
             </section>
 

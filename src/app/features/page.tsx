@@ -2,20 +2,20 @@ import { FeaturesComponent } from '@/components/FeaturesPage';
 import React from 'react'
 
 export const metadata = {
-    title: "Zenarmor Features Page ",
-    description: "Features Page for Zenarmor, offers a visual stunning display and informative describtion",
+    title: "Features - Zenarmor Cybersecurity Platform",
+    description: "Explore Zenarmor's advanced features: AI-powered threat detection, deep packet inspection, real-time analytics, application control, and comprehensive network visibility across all major platforms.",
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://jptribe-landing-sass.vercel.app/features", 
-        title: 'Zenarmor - by Prodius Enterprise',
-        description: 'Prodius Enterprise provides stable and highend solutions',
+        url: "https://zenarmor.com/features",
+        title: 'Features - Zenarmor Cybersecurity Platform',
+        description: 'AI-powered threat detection, deep packet inspection, and real-time analytics. Comprehensive network security features for enterprise and home deployments.',
         images: [
             {
-            url: 'https://jptribe-landing-sass.vercel.app/og-image.jpg',
+            url: 'https://zenarmor.com/og-image.jpg',
             width: 1200,
             height: 630,
-            alt: 'Landing Sass by Prodius Enterprise',
+            alt: 'Zenarmor Features - Next-Generation Cybersecurity',
             },
         ],
     },

@@ -8,15 +8,20 @@ import LogoTicker from "@/sections/LogoTicker";
 import Support from "@/sections/Support";
 
 export const metadata = {
-    title: "Zenarmor",
-    description: "Zenarmor beautiful landing page with modern technologies",
+    title: "Zenarmor - Next-Generation Cybersecurity Solutions",
+    description: "Advanced packet inspection technology ensuring maximum protection with minimal overhead. Trusted by 13.5K+ deployments worldwide across OPNsense, pfSense, FreeBSD, and more.",
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://jptribe-landing-sass.vercel.app/",
-        title: 'Zenarmor - by Prodius Enterprise',
-        description: 'Prodius Enterprise provides stable and highend solutions',
-
+        url: "https://zenarmor.com/",
+        title: 'Zenarmor - Next-Generation Cybersecurity Solutions',
+        description: 'Advanced packet inspection technology ensuring maximum protection with minimal overhead. Safeguarding networks across the globe with seamless deployment and intuitive management.',
+        images: [
+            {
+                url: 'https://zenarmor.com/og-image.jpg',
+                alt: 'Zenarmor - Next-Generation Cybersecurity Solutions',
+            }
+        ],
     },
 };
 

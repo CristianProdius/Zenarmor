@@ -6,32 +6,32 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "How is Zenarmor different from other design tools?",
-        answer: "Unlike traditional design tools, Zenarmor prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, reducing clicks and keeping you in your creative flow.",
+        question: "What makes Zenarmor different from traditional firewalls?",
+        answer: "Zenarmor combines next-generation packet inspection with AI-powered threat detection, offering deeper visibility and control than traditional firewalls. Our advanced DPI technology identifies threats in real-time while maintaining minimal network overhead, ensuring both security and performance.",
     },
     {
-        question: "Is there a learning curve?",
-        answer: "Zenarmor is designed to feel intuitive from day one. Most designers are productive within hours, not weeks. We also provide interactive tutorials and comprehensive documentation to help you get started.",
+        question: "Which platforms does Zenarmor support?",
+        answer: "Zenarmor seamlessly integrates with OPNsense, pfSense, FreeBSD, macOS, Windows, and Ubuntu. Our flexible deployment model allows you to protect your network regardless of your infrastructure, from home offices to enterprise data centers with over 13.5K+ active deployments worldwide.",
     },
     {
-        question: "How do you handle version control?",
-        answer: "Every change in Zenarmor is automatically saved and versioned. You can review history, restore previous versions, and create named versions for important milestones.",
+        question: "How does Zenarmor handle encrypted traffic?",
+        answer: "Zenarmor uses advanced heuristic analysis and machine learning to identify threats even in encrypted traffic without compromising user privacy. Our intelligent inspection techniques analyze traffic patterns, metadata, and behavioral indicators to detect malicious activity while respecting encryption protocols.",
     },
     {
-        question: "Can I work offline?",
-        answer: "Yes! Zenarmor includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
+        question: "Is Zenarmor suitable for small businesses and home networks?",
+        answer: "Absolutely! Zenarmor scales from home networks to enterprise deployments. Our intuitive management interface makes enterprise-grade security accessible to everyone, while advanced features remain available for power users and security professionals who need granular control.",
     },
     {
-        question: "How does Zenarmor handle collaboration?",
-        answer: "Zenarmor is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
+        question: "What kind of threats does Zenarmor protect against?",
+        answer: "Zenarmor provides comprehensive protection against malware, ransomware, phishing attacks, botnet communication, data exfiltration, and zero-day exploits. Our constantly updated threat intelligence database and behavioral analysis engine ensure you stay protected against emerging threats.",
     },
     {
-        question: "Can I get in contact?",
-        answer: "Yes! Zenarmor includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
+        question: "How do updates and threat intelligence work?",
+        answer: "Zenarmor receives automatic threat intelligence updates to protect against the latest security threats. Our cloud-based threat database is continuously updated with signatures and behavioral patterns from our global network, ensuring real-time protection without manual intervention.",
     },
     {
-        question: "What happens if something crash?",
-        answer: "Zenarmor is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
+        question: "Can I monitor network activity and generate reports?",
+        answer: "Yes! Zenarmor provides comprehensive analytics, real-time monitoring dashboards, and detailed reporting capabilities. Track bandwidth usage, identify security incidents, analyze traffic patterns, and generate compliance reports with our intuitive visualization tools and customizable alerts.",
     },
 ];
 

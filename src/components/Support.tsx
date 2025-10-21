@@ -23,10 +23,10 @@ export const SupportComponent = () => {
                         </>
                     }
                     examples={[
-                        "Does your product work for SMBs?",
-                        "Can I pause my membership without losing my data?",
-                        "How does seat based pricing work?",
-                        "What's the meaning of life?",
+                        "How do I deploy Zenarmor on pfSense?",
+                        "Can Zenarmor block specific applications or categories?",
+                        "How does threat intelligence update frequency work?",
+                        "What are the minimum hardware requirements?",
                     ]}
                 />
             </div>
