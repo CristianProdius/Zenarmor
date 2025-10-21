@@ -8,22 +8,15 @@ import LogoTicker from "@/sections/LogoTicker";
 import Support from "@/sections/Support";
 
 export const metadata = {
-    title: "Layers Landing Sass Page ",
-    description: "Layers beautiful landing page with modern technologies",
+    title: "Zenarmor",
+    description: "Zenarmor beautiful landing page with modern technologies",
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://jptribe-landing-sass.vercel.app/", 
-        title: 'Layers - by NighteCoding',
-        description: 'NighteCoding provides stable and highend solutions',
-        images: [
-            {
-            url: 'https://jptribe-landing-sass.vercel.app/og-image.jpg',
-            width: 1200,
-            height: 630,
-            alt: 'Landing Sass by NighteCoding',
-            },
-        ],
+        url: "https://jptribe-landing-sass.vercel.app/",
+        title: 'Zenarmor - by Prodius Enterprise',
+        description: 'Prodius Enterprise provides stable and highend solutions',
+
     },
 };
 
@@ -40,5 +33,5 @@ export default function Home() {
             <Support />
         </main>
     )
-    
+
 }

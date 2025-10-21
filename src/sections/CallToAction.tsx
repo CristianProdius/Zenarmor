@@ -29,18 +29,18 @@ export default function CallToAction() {
     }, [isHovered]);
 
     return (
-        <section className="py-24">
+        <section className="py-24 bg-white">
             <div className="overflow-x-clip p-4 flex">
-                <motion.div 
+                <motion.div
                     ref={scope}
-                    className="flex flex-none gap-16 pr-16 text-7xl md:text-8xl font-medium group cursor-pointer"
+                    className="flex flex-none gap-16 pr-16 text-7xl md:text-8xl font-medium cursor-pointer"
                     onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() =>setIsHovered(false)} 
+                    onMouseLeave={() => setIsHovered(false)}
                 >
                     {Array.from({ length: 10}).map((_, i) => (
-                        <div key={i} className="flex items-center gap-16">
-                            <span className="text-lime-400 text-7xl group-hover:text-white transition">&#10038;</span>
-                            <span className="group-hover:text-lime-400 transition">Try it for free</span>
+                        <div key={i} className="flex items-center gap-16 group">
+                            <span className="text-[#F98800] text-7xl group-hover:text-[#020045] transition duration-500">&#10038;</span>
+                            <span className="text-[#020045] group-hover:text-[#F98800] transition duration-500">Secure Your Network</span>
                         </div>
                     ))}
                 </motion.div>

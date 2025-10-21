@@ -21,7 +21,7 @@ export default function Pointer(props: { name: string; color?: "red" | "blue"; }
                 <path d="M13 13l6 6"></path>
             </svg>
             <div className="absolute top-full left-full">
-                <div className={twMerge("inline-flex rounded-full rounded-tl-none font-bold text-neutral-900 text-sm bg-blue-500 px-2", color === "red" && "bg-red-500")}>
+                <div className={twMerge("inline-flex rounded-full rounded-tl-none font-bold text-brand-navy text-sm bg-blue-500 px-2", color === "red" && "bg-red-500")}>
                     {name}
                 </div>
             </div>

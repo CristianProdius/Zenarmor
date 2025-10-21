@@ -6,7 +6,7 @@ export default function Key(props: HTMLAttributes<HTMLDivElement>) {
     const { className, children, ...otherProps} = props;
 
     return (
-        <section className={twMerge("size-14  bg-neutral-300 inline-flex justify-center items-center rounded-2xl text-xl text-neutral-950 font-medium", className)} {...otherProps}>
+        <section className={twMerge("size-14 bg-white inline-flex justify-center items-center rounded-2xl text-xl text-brand-navy font-medium shadow-sm border border-neutral-200", className)} {...otherProps}>
             {children}
         </section>
     )

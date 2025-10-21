@@ -1,6 +1,6 @@
 # Layer Landing Sass Project
 
-This Layer Landing Sass project is under **NighteCoding** and is built using **Next.js**, **TypeScript**, **TailwindCSS**, and **Framer Motion**. 
+This Layer Landing Sass project is under **Prodius Enterprise** and is built using **Next.js**, **TypeScript**, **TailwindCSS**, and **Framer Motion**. 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

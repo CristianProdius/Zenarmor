@@ -7,10 +7,10 @@ interface TagProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const pageStyles: Record<NonNullable<TagProps["section"]>, string> = {
-    faq: "tracking-wider text-lime-400",
-    features: "tracking-normal text-lime-400",
-    integration: "tracking-normal text-lime-400",
-    introducing: "tracking-normal text-lime-400",
+    faq: "tracking-wider text-brand-mustard",
+    features: "tracking-normal text-brand-mustard",
+    integration: "tracking-normal text-brand-mustard",
+    introducing: "tracking-normal text-brand-mustard",
 };
 
 const Tag = ({ section, className, children, ...otherProps }: TagProps) => {
@@ -19,8 +19,8 @@ const Tag = ({ section, className, children, ...otherProps }: TagProps) => {
             className={twMerge(
                 clsx(
                     "inline-flex border gap-2 px-3 py-1 rounded-full uppercase items-center",
-                    "border-lime-400", 
-                    section ? pageStyles[section] : "text-lime-400" 
+                    "border-brand-mustard bg-orange-50",
+                    section ? pageStyles[section] : "text-brand-mustard"
                 ),
                 className
             )}

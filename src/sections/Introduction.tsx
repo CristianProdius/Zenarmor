@@ -5,7 +5,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-const text = `You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.`;
+const text = `Traditional security solutions slow you down with complex deployments and steep learning curves.`;
 const words = text.split(" ");
 
 export default function Introduction() {
@@ -22,22 +22,22 @@ export default function Introduction() {
     }, [wordIndex]);
 
     return (
-        <section className="py-16 lg:py-28">
+        <section className="py-16 lg:py-28 bg-white">
             <div className="container">
                 <div className="sticky top-20 md:top-28 lg:top-40">
                     <div className="justify-center flex">
-                        <Tag className="mb-4">Introducing Layers</Tag>
+                        <Tag className="mb-4">Introducing Zenarmor</Tag>
                     </div>
                     <div className="text-center text-4xl md:text-6xl lg:text-7xl font-medium mt-8">
-                        <span>Your creative process deserves better.</span>{" "}
+                        <span className="text-brand-navy">Security shouldn't be complicated.</span>{" "}
                         <span className="">
                             {words.map((word, wordIndex) => (
-                                <span key={wordIndex} className={twMerge("transition duration-500 text-white/15", wordIndex < currentWord && "text-white")}>
+                                <span key={wordIndex} className={twMerge("transition duration-500 text-neutral-300", wordIndex < currentWord && "text-brand-navy")}>
                                     {`${word} `}
-                                </span>  
+                                </span>
                             ))}
                         </span>
-                        <span className="text-lime-400 block">Thats why we built Layers.</span>
+                        <span className="text-brand-mustard block">Plug & Secure. Anywhere, Anytime.</span>
                     </div>
                 </div>
 

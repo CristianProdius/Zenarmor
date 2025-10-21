@@ -58,10 +58,10 @@ export default function Navbar() {
         <>
             <main className="py-4 lg:py-8 fixed w-full top-0 z-[50]">
                 <section className="container max-w-5xl">
-                    <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
+                    <div className="border border-neutral-200 rounded-[27px] md:rounded-full bg-white/90 backdrop-blur shadow-sm">
                         <div className="grid grid-cols-2 lg:grid-cols-3 items-center p-2 px-4 md:pr-2">
                             <Link href={"/"}>
-                                <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />
+                                <Image src={logoImage} alt="Logo" className="h-6 md:h-8 w-auto object-contain" />
                             </Link>
 
                             {/* Navigation Links (Desktop) */}
@@ -71,7 +71,7 @@ export default function Navbar() {
                                         <a
                                             key={index}
                                             href={link.href}
-                                            className="text-neutral-200 font-medium hover:text-primary-500 hover:scale-105 hover:text-lime-500 transition-all"
+                                            className="text-brand-navy font-medium hover:text-brand-mustard hover:scale-105 transition-all"
                                         >
                                             {link.label}
                                         </a>
@@ -103,10 +103,10 @@ export default function Navbar() {
                                 {/* Show Login/Register If Not Logged In */}
                                 {!isAuthenticated ? (
                                     <>
-                                        <Button variant="secondary" className="hidden md:inline-flex items-center hover:border-transparent transition">
+                                        <Button variant="secondary" className="hidden md:inline-flex items-center transition">
                                             <Link href={"/login"}>Login</Link>
                                         </Button>
-                                        <Button variant="primary" className="hidden md:inline-flex items-center hover:bg-lime-500 transition-colors">
+                                        <Button variant="primary" className="hidden md:inline-flex items-center transition-colors">
                                             <Link href={"/register"}>Sign Up</Link>
                                         </Button>
                                     </>
@@ -115,34 +115,34 @@ export default function Navbar() {
                                 <div className="relative hidden md:block">
                                     <button
                                         onClick={() => setDropdownOpen(!dropdownOpen)}
-                                        className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-full text-white hover:bg-gray-700"
+                                        className="flex items-center gap-2 px-4 py-2 bg-neutral-100 rounded-full text-brand-navy hover:bg-neutral-200"
                                     >
                                         <span>User</span>
-                                        <svg width="12" height="12" fill="white" className={twMerge("transition-transform", dropdownOpen && "rotate-180")} viewBox="0 0 24 24">
+                                        <svg width="12" height="12" fill="currentColor" className={twMerge("transition-transform", dropdownOpen && "rotate-180")} viewBox="0 0 24 24">
                                             <path d="M7 10l5 5 5-5z"></path>
                                         </svg>
                                     </button>
 
                                     {/* Dropdown Menu */}
                                     {dropdownOpen && (
-                                        <div className="absolute right-0 mt-2 w-36 bg-gray-800 rounded-md shadow-lg overflow-hidden">
+                                        <div className="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg overflow-hidden border border-neutral-200">
                                             <Link
                                                 href="/auth/profile"
-                                                className="block px-4 py-2 text-white hover:bg-gray-700"
+                                                className="block px-4 py-2 text-brand-navy hover:bg-neutral-100"
                                                 onClick={() => setDropdownOpen(false)}
                                             >
                                                 Profile
                                             </Link>
                                             <Link
                                                 href="/auth/news"
-                                                className="block px-4 py-2 text-white hover:bg-gray-700"
+                                                className="block px-4 py-2 text-brand-navy hover:bg-neutral-100"
                                                 onClick={() => setDropdownOpen(false)}
                                             >
                                                 Newsletter
                                             </Link>
                                             <button
                                                 onClick={handleLogout}
-                                                className="block w-full text-left px-4 py-2 text-white hover:bg-gray-700"
+                                                className="block w-full text-left px-4 py-2 text-brand-navy hover:bg-neutral-100"
                                             >
                                                 Logout
                                             </button>
@@ -167,7 +167,7 @@ export default function Navbar() {
                                             <motion.a
                                                 key={index}
                                                 href={link.href}
-                                                className="text-neutral-200 font-medium hover:text-primary-500"
+                                                className="text-brand-navy font-medium hover:text-brand-mustard"
                                                 custom={index}
                                                 initial="hidden"
                                                 animate="visible"
@@ -181,7 +181,7 @@ export default function Navbar() {
                                         {/* Mobile User Dropdown */}
                                         {isAuthenticated ? (
                                             <div className="flex flex-col items-center gap-4">
-                                                <Link href="/auth/profile" className="text-white font-medium">
+                                                <Link href="/auth/profile" className="text-brand-navy font-medium">
                                                 Profile
                                                 </Link>
                                                 <button

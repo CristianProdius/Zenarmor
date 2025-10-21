@@ -17,12 +17,22 @@ const config: Config = {
             },
         },
         fontFamily: {
-            sans: ["var(--font-inter)", "sans-serif"],
+            sans: ["var(--font-rubik)", "sans-serif"],
+            body: ["var(--font-roboto)", "sans-serif"],
         },
         screens: {
             sm: "375px",
             md: "768px",
             lg: "1200px",
+        },
+        extend: {
+            colors: {
+                brand: {
+                    mustard: "#F98800",
+                    navy: "#020045",
+                    neutral: "#9DA4AE",
+                },
+            },
         },
     },
     plugins: [],

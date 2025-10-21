@@ -13,12 +13,12 @@ interface BlockInTextCardProps {
 export const SupportComponent = () => {
     return (
         <section className="pt-16 pb-10">
-            <div className="flex items-center justify-center text-neutral-300">
+            <div className="flex items-center justify-center text-neutral-700">
                 <BlockInTextCard
                     tag="/ Support"
                     text={
                         <>
-                            <span className="font-bold text-lime-400">Have questions?</span> We&apos;d love to help! Contact support
+                            <span className="font-bold text-brand-mustard">Have questions?</span> We&apos;d love to help! Contact support
                             for any issue you may face.
                         </>
                     }
@@ -39,7 +39,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
         <div className="w-full max-w-xl space-y-6">
             <div>
                 <p className="mb-1.5 text-3xl font-semibold uppercase">{tag}</p>
-                <hr className="border-neutral-700" />
+                <hr className="border-neutral-300" />
             </div>
             <p className="max-w-lg text-xl leading-relaxed">{text}</p>
             <div>
@@ -47,7 +47,7 @@ const BlockInTextCard = ({ tag, text, examples }: BlockInTextCardProps) => {
                 <hr className="border-neutral-300" />
             </div>
 
-            <button className="w-full rounded-full border border-neutral-600 py-2 text-xl font-medium hover:bg-lime-500 hover:text-neutral-800 transition-colors">
+            <button className="w-full rounded-full border border-neutral-300 py-2 text-xl font-medium hover:bg-brand-mustard hover:text-brand-navy transition-colors">
                 <Link href={'/contact'} >Contact Support</Link>
             </button>
         </div>
@@ -121,7 +121,7 @@ const Typewrite = ({ examples }: { examples: string[] }) => {
                                 duration: BOX_FADE_DURATION,
                                 ease: "easeInOut",
                             }}
-                            className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-neutral-950"
+                            className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-white"
                         />
                     </motion.span>
                 ))}

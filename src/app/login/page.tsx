@@ -50,24 +50,25 @@ const LoginPage = () => {
   };
 
   return (
-    <main className="py-20">
-      <section className="container flex flex-col items-center justify-center text-white">
+    <main className="py-20 bg-white min-h-screen">
+      <section className="container flex flex-col items-center justify-center">
         <motion.div
-          className="w-full max-w-lg bg-gray-800 rounded-2xl p-8 shadow-lg"
+          className="w-full max-w-lg bg-white rounded-2xl p-8 shadow-xl border border-neutral-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <div className="flex justify-center mb-6">
             <Link href={"/"}>
-              <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />
+              <Image src={logoImage} alt="Zenarmor Logo" className="h-10 w-auto" />
             </Link>
           </div>
-          <h1 className="text-center text-3xl font-semibold mb-6">Welcome Back</h1>
+          <h1 className="text-center text-3xl font-semibold mb-2 text-[#020045]">Welcome Back</h1>
+          <p className="text-center text-sm text-[#9DA4AE] mb-6">Sign in to your Zenarmor account</p>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label className="block text-sm font-medium mb-1" htmlFor="email">
+              <label className="block text-sm font-medium mb-1 text-[#020045]" htmlFor="email">
                 Email
               </label>
               <input
@@ -75,12 +76,12 @@ const LoginPage = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full bg-white border-2 border-neutral-200 rounded-lg p-3 text-sm placeholder-[#9DA4AE] text-[#020045] focus:outline-none focus:ring-2 focus:ring-[#F98800] focus:border-transparent transition"
                 placeholder="Enter your email"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1" htmlFor="password">
+              <label className="block text-sm font-medium mb-1 text-[#020045]" htmlFor="password">
                 Password
               </label>
               <input
@@ -88,7 +89,7 @@ const LoginPage = () => {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full bg-white border-2 border-neutral-200 rounded-lg p-3 text-sm placeholder-[#9DA4AE] text-[#020045] focus:outline-none focus:ring-2 focus:ring-[#F98800] focus:border-transparent transition"
                 placeholder="Enter your password"
               />
             </div>
@@ -98,29 +99,29 @@ const LoginPage = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="h-4 w-4 bg-gray-700 rounded border-gray-600 focus:ring-green-500"
+                  className="h-4 w-4 rounded border-neutral-300 text-[#F98800] focus:ring-[#F98800]"
                 />
-                <span className="text-sm text-gray-400">Remember me</span>
+                <span className="text-sm text-[#9DA4AE]">Remember me</span>
               </label>
               <Link href="/forgot-password">
-                <span className="text-sm text-green-500 hover:underline">
+                <span className="text-sm text-[#F98800] hover:underline">
                   Forgot Password?
                 </span>
               </Link>
             </div>
             <motion.button
               type="submit"
-              className="w-full bg-green-500 text-black rounded-lg py-3 font-semibold hover:bg-green-600"
+              className="w-full bg-[#F98800] text-white rounded-lg py-3 font-semibold hover:bg-[#E07A00] transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               Login
             </motion.button>
           </form>
-          <p className="text-center text-sm text-gray-400 mt-6">
-            Dont have an account?{" "}
+          <p className="text-center text-sm text-[#9DA4AE] mt-6">
+            Don't have an account?{" "}
             <Link href="/register">
-              <span className="text-green-500 hover:underline">Sign Up</span>
+              <span className="text-[#F98800] hover:underline font-medium">Sign Up</span>
             </Link>
           </p>
         </motion.div>

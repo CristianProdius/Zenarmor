@@ -45,7 +45,7 @@ const NewsPage = () => {
                         <div className="text-lg text-center mb-6">
                             You are not subscribed to our newsletter. <br/> 
                             Please visit the{" "} 
-                            <Link href={'/'} className="text-lime-500 hover:underline transition-transform">
+                            <Link href={'/'} className="text-brand-mustard hover:underline transition-transform">
                                 Home Page
                             </Link> 
                             {" "}to subscribe.

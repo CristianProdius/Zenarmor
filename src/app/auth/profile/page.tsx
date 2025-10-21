@@ -62,7 +62,7 @@ const ProfilePage = () => {
             <section className="container">
                 <div className="max-w-2xl p-6 rounded-xl flex flex-col items-center justify-center bg-gray-900 text-white mx-auto">
                     <h1 className="text-2xl md:text-4xl font-bold mb-4">Welcome, {email}!</h1>
-                    <p className="text-base md:text-xl mb-6 ring-2 ring-lime-500 rounded-md p-1.5">
+                    <p className="text-base md:text-xl mb-6 ring-2 ring-brand-mustard rounded-md p-1.5">
                         This is your protected profile page.
                     </p>
                     <div>
@@ -76,7 +76,7 @@ const ProfilePage = () => {
                                 className={` text-white mx-auto flex justify-center font-semibold tracking-wider ${
                                     isSubscribed
                                         ? "border-b-2 border-b-orange-500 hover:border-b-transparent transition-transform"
-                                        : "border-b-2 border-b-lime-500 hover:border-b-transparent transition-transform"
+                                        : "border-b-2 border-b-brand-mustard hover:border-b-transparent transition-transform"
                                 }`}
                             >
                                 {isSubscribed ? "Unsubscribe from Newsletter" : "Newsletter subscription"}
@@ -85,7 +85,7 @@ const ProfilePage = () => {
                     <div className="flex flex-col md:flex-row justify-start items-center gap-6 mt-8">
                         <button
                             onClick={handleLogout}
-                            className="bg-lime-600 px-4 py-2 rounded-lg text-white hover:bg-lime-700"
+                            className="bg-brand-mustard px-4 py-2 rounded-lg text-white hover:bg-brand-mustard"
                         >
                             Logout
                         </button>

@@ -1,11 +1,11 @@
 import { ButtonHTMLAttributes } from "react";
 import { cva } from "class-variance-authority";
 
-const classes  = cva('border h-8 md:h-12 px-6 rounded-full font-medium', { 
+const classes  = cva('border h-8 md:h-12 px-6 rounded-full font-medium transition-colors', {
     variants: {
         variant: {
-            primary: 'bg-lime-400 text-neutral-950 border-lime-400',
-            secondary: 'border-white text-white bg-transparent',
+            primary: 'bg-[#F98800] text-white border-[#F98800] hover:bg-[#E07A00]',
+            secondary: 'border-[#020045] text-[#020045] bg-transparent hover:bg-[#020045] hover:text-white',
         },
         size: {
             sm: 'h-10',

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    cursor: url('/cursor-you.svg'), auto;
+  }
+
+  button, a, input[type="submit"] {
+    cursor: url('/cursor-you.svg'), pointer;
+  }
+}

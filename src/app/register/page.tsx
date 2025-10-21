@@ -28,19 +28,20 @@ const RegisterPage = () => {
     };
 
     return (
-        <main className="py-20">
-            <section className="container flex items-center justify-center text-white">
-                <div className="w-full max-w-lg bg-gray-800 rounded-xl p-8 shadow-lg">
+        <main className="py-20 bg-white min-h-screen">
+            <section className="container flex items-center justify-center">
+                <div className="w-full max-w-lg bg-white rounded-2xl p-8 shadow-xl border border-neutral-200">
                 <div className="flex justify-center mb-6">
                     <Link href={"/"}>
-                        <Image src={logoImage} alt="Logo" className="h-9 md:h-auto w-auto" />
+                        <Image src={logoImage} alt="Zenarmor Logo" className="h-10 w-auto" />
                     </Link>
                 </div>
-                    <h1 className="text-center text-3xl font-bold mb-6">Register</h1>
+                    <h1 className="text-center text-3xl font-semibold mb-2 text-[#020045]">Create Account</h1>
+                    <p className="text-center text-sm text-[#9DA4AE] mb-6">Join Zenarmor and secure your network</p>
 
                     <form onSubmit={handleRegister} className="space-y-4">
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium">
+                            <label htmlFor="email" className="block text-sm font-medium mb-1 text-[#020045]">
                                 Email
                             </label>
                             <input
@@ -48,12 +49,12 @@ const RegisterPage = () => {
                                 id="email"
                                 value={email}
                                 onChange={(e) => setLocalEmail(e.target.value)}
-                                className="w-full bg-gray-700 rounded-lg p-3 border border-gray-600 placeholder-gray-400 focus:ring-2 focus:ring-green-500"
+                                className="w-full bg-white border-2 border-neutral-200 rounded-lg p-3 text-sm placeholder-[#9DA4AE] text-[#020045] focus:outline-none focus:ring-2 focus:ring-[#F98800] focus:border-transparent transition"
                                 placeholder="Enter your email"
                             />
                         </div>
                         <div>
-                            <label htmlFor="password" className="block text-sm font-medium">
+                            <label htmlFor="password" className="block text-sm font-medium mb-1 text-[#020045]">
                                 Password
                             </label>
                             <input
@@ -61,25 +62,25 @@ const RegisterPage = () => {
                                 id="password"
                                 value={password}
                                 onChange={(e) => setLocalPassword(e.target.value)}
-                                className="w-full bg-gray-700 rounded-lg p-3 border border-gray-600 placeholder-gray-400 focus:ring-2 focus:ring-green-500"
+                                className="w-full bg-white border-2 border-neutral-200 rounded-lg p-3 text-sm placeholder-[#9DA4AE] text-[#020045] focus:outline-none focus:ring-2 focus:ring-[#F98800] focus:border-transparent transition"
                                 placeholder="Enter your password"
                             />
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-green-500 text-black rounded-lg py-3 hover:bg-green-600"
+                            className="w-full bg-[#F98800] text-white rounded-lg py-3 font-semibold hover:bg-[#E07A00] transition-colors"
                         >
-                            Register
+                            Create Account
                         </button>
                     </form>
-                    <p className="text-center text-sm text-gray-400 mt-6">
+                    <p className="text-center text-sm text-[#9DA4AE] mt-6">
                         Already have an account?{" "}
                         <Link href="/login">
-                            <span className="text-green-500 hover:underline">Login</span>
+                            <span className="text-[#F98800] hover:underline font-medium">Login</span>
                         </Link>
                     </p>
                 </div>
-                
+
             </section>
         </main>
     );

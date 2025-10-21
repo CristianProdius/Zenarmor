@@ -1,34 +1,34 @@
 import Tag from "@/components/Tag";
-import figmaIcon from "@/assets/images/figma-logo.svg";
-import notionIcon from "@/assets/images/notion-logo.svg";
-import slackIcon from "@/assets/images/slack-logo.svg";
-import relumeIcon from "@/assets/images/relume-logo.svg";
-import framerIcon from "@/assets/images/framer-logo.svg";
-import githubIcon from "@/assets/images/github-logo.svg";
+import opnsenseIcon from "@/assets/images/opnsense-logo.svg";
+import pfsenseIcon from "@/assets/images/pfsense-logo.svg";
+import freebsdIcon from "@/assets/images/freebsd-logo.svg";
+import windowsIcon from "@/assets/images/windows-logo.svg";
+import ubuntuIcon from "@/assets/images/ubuntu-logo.svg";
+import macosIcon from "@/assets/images/macos-logo.svg";
 import IntegrationColumn from "@/components/IntegrationColumn";
 
 const integrations = [
-    { name: "Figma", icon: figmaIcon, description: "Figma is a collaborative interface design tool." },
-    { name: "Notion", icon: notionIcon, description: "Notion is an all-in-one workspace for notes and docs." },
-    { name: "Slack", icon: slackIcon, description: "Slack is a powerful team communication platform." },
-    { name: "Relume", icon: relumeIcon, description: "Relume is a no-code website builder and design system." },
-    { name: "Framer", icon: framerIcon, description: "Framer is a professional website prototyping tool." },
-    { name: "GitHub", icon: githubIcon, description: "GitHub is the leading platform for code collaboration." },
+    { name: "OPNsense", icon: opnsenseIcon, description: "Open-source firewall with advanced packet inspection and web filtering." },
+    { name: "pfSense", icon: pfsenseIcon, description: "FreeBSD-based firewall with comprehensive network security features." },
+    { name: "FreeBSD", icon: freebsdIcon, description: "Enterprise-grade Unix platform for network security deployments." },
+    { name: "Windows", icon: windowsIcon, description: "Deploy on Windows Server and desktop environments with full endpoint protection." },
+    { name: "Ubuntu Linux", icon: ubuntuIcon, description: "Cloud-native security for Ubuntu servers and workstations." },
+    { name: "macOS", icon: macosIcon, description: "Advanced network security for Apple enterprise environments." },
 ];
 export type IntegrationsType = typeof integrations;
 
 export default function Integrations() {
     return (
-        <section className="py-24 overflow-hidden">
+        <section className="py-24 overflow-hidden bg-white">
             <div className="container">
                 <div className="grid lg:grid-cols-2 items-center lg:gap-16">
                     <div>
-                        <Tag>Integrations</Tag>
-                        <h2 className="text-6xl font-medium mt-6">
-                            Plays well with <span className="text-lime-400">others</span>
+                        <Tag>Platform Compatibility</Tag>
+                        <h2 className="text-6xl font-medium mt-6 text-brand-navy">
+                            Deploy <span className="text-brand-mustard">anywhere</span>
                         </h2>
-                        <p className="text-white/50 mt-4 text-lg">
-                            Layers seamlessly connects with your favorite tools, making it easy to plug into any workflow and collaborate across platforms.
+                        <p className="text-neutral-600 mt-4 text-lg">
+                            Zenarmor delivers powerful, cloud-based network security across firewalls, servers, and endpoints. Our advanced packet inspection technology ensures maximum protection with minimal overhead, wherever you need it.
                         </p>
                     </div>
 

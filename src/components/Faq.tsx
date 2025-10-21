@@ -6,32 +6,32 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "How is Layers different from other design tools?",
-        answer: "Unlike traditional design tools, Layers prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, reducing clicks and keeping you in your creative flow.",
+        question: "How is Zenarmor different from other design tools?",
+        answer: "Unlike traditional design tools, Zenarmor prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, reducing clicks and keeping you in your creative flow.",
     },
     {
         question: "Is there a learning curve?",
-        answer: "Layers is designed to feel intuitive from day one. Most designers are productive within hours, not weeks. We also provide interactive tutorials and comprehensive documentation to help you get started.",
+        answer: "Zenarmor is designed to feel intuitive from day one. Most designers are productive within hours, not weeks. We also provide interactive tutorials and comprehensive documentation to help you get started.",
     },
     {
         question: "How do you handle version control?",
-        answer: "Every change in Layers is automatically saved and versioned. You can review history, restore previous versions, and create named versions for important milestones.",
+        answer: "Every change in Zenarmor is automatically saved and versioned. You can review history, restore previous versions, and create named versions for important milestones.",
     },
     {
         question: "Can I work offline?",
-        answer: "Yes! Layers includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
+        answer: "Yes! Zenarmor includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
     },
     {
-        question: "How does Layers handle collaboration?",
-        answer: "Layers is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
+        question: "How does Zenarmor handle collaboration?",
+        answer: "Zenarmor is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
     },
     {
         question: "Can I get in contact?",
-        answer: "Yes! Layers includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
+        answer: "Yes! Zenarmor includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
     },
     {
         question: "What happens if something crash?",
-        answer: "Layers is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
+        answer: "Zenarmor is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.",
     },
 ];
 
@@ -52,9 +52,9 @@ const FaqComponent = () => {
             <div className="container">
                 <div className="mt-12 flex flex-col gap-6 max-w-2xl mx-auto">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="bg-neutral-900 rounded-2xl border border-white-/10 p-6">
+                        <div key={index} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
                             <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleFaq(index)}>
-                                <h3 className="font-medium">{faq.question}</h3>
+                                <h3 className="font-medium text-gray-900">{faq.question}</h3>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -66,7 +66,7 @@ const FaqComponent = () => {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     className={twMerge(
-                                        "feather feather-plus text-lime-400 flex-shrink-0 transition duration-300",
+                                        "feather feather-plus text-brand-mustard flex-shrink-0 transition duration-300",
                                         openFaqs[index] && "rotate-45"
                                     )}
                                 >
@@ -92,7 +92,7 @@ const FaqComponent = () => {
                                         }}
                                         className={twMerge("overflow-hidden")}
                                     >
-                                        <p className="text-white/50">{faq.answer}</p>
+                                        <p className="text-gray-600">{faq.answer}</p>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
