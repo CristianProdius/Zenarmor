@@ -119,7 +119,7 @@ const LoginPage = () => {
             </motion.button>
           </form>
           <p className="text-center text-sm text-[#9DA4AE] mt-6">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/register">
               <span className="text-[#F98800] hover:underline font-medium">Sign Up</span>
             </Link>

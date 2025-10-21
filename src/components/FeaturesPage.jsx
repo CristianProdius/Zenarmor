@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiShield, FiActivity, FiServer, FiLock } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Highlight } from "prism-react-renderer";

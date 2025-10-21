@@ -29,7 +29,7 @@ export default function Introduction() {
                         <Tag className="mb-4">Introducing Zenarmor</Tag>
                     </div>
                     <div className="text-center text-4xl md:text-6xl lg:text-7xl font-medium mt-8">
-                        <span className="text-brand-navy">Security shouldn't be complicated.</span>{" "}
+                        <span className="text-brand-navy">Security shouldn&apos;t be complicated.</span>{" "}
                         <span className="">
                             {words.map((word, wordIndex) => (
                                 <span key={wordIndex} className={twMerge("transition duration-500 text-neutral-300", wordIndex < currentWord && "text-brand-navy")}>
