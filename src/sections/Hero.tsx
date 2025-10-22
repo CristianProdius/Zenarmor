@@ -4,24 +4,25 @@ import Button from "@/components/Button";
 import Tag from "@/components/Tag";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import useAuthStore from "../app/stores/authStore";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Hero() {
-    const { toggleNewsletterSubscription } = useAuthStore();
     const [email, setEmail] = useState("");
 
     const handleSubscribe = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!email) {
-            toast.error("Please enter a valid email!");
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            toast.error("Please enter a valid email address!");
             return;
         }
-        // Subscribe to newsletter
-        toggleNewsletterSubscription(email);
-        toast.success("You have subscribed to the monthly newsletter!");
+
+        // In a real app, this would send to your backend/mailing list API
+        toast.success("Thanks for subscribing! We'll keep you updated.");
+        setEmail(""); // Clear the input
     };
 
     return (

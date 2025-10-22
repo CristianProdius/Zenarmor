@@ -3,13 +3,10 @@
 import Image from "next/image";
 import logoImage from "../assets/images/logo.svg";
 import Button from "@/components/Button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import useAuthStore from "../app/stores/authStore";
-import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
 
 const navLinks = [
     { label: "Features", href: "/features" },
@@ -32,27 +29,6 @@ const linkVariants = {
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const { isAuthenticated, setIsAuthenticated } = useAuthStore();
-    const [hydrated, setHydrated] = useState(false);
-    const router = useRouter();
-
-    // ✅ Wait for Zustand to hydrate before rendering
-    useEffect(() => {
-        setHydrated(true);
-        const authState = Cookies.get("isAuthenticated") === "true";
-        setIsAuthenticated(authState);
-    }, [setIsAuthenticated]);
-
-    // ✅ Prevent rendering until hydration is complete
-    if (!hydrated) return null;
-
-    const handleLogout = () => {
-        Cookies.remove("isAuthenticated");
-        setIsAuthenticated(false);
-        setDropdownOpen(false);
-        router.push("/login");
-    };
 
     return (
         <>
@@ -100,56 +76,9 @@ export default function Navbar() {
                                     <line x1="3" y1="18" x2="21" y2="18" className={twMerge("origin-left transition", isOpen && "-rotate-45 translate-y-1")}></line>
                                 </svg>
 
-                                {/* Show Login/Register If Not Logged In */}
-                                {!isAuthenticated ? (
-                                    <>
-                                        <Button variant="secondary" className="hidden md:inline-flex items-center transition">
-                                            <Link href={"/login"}>Login</Link>
-                                        </Button>
-                                        <Button variant="primary" className="hidden md:inline-flex items-center transition-colors">
-                                            <Link href={"/register"}>Sign Up</Link>
-                                        </Button>
-                                    </>
-                                ) : (
-                                /* User Dropdown */
-                                <div className="relative hidden md:block">
-                                    <button
-                                        onClick={() => setDropdownOpen(!dropdownOpen)}
-                                        className="flex items-center gap-2 px-4 py-2 bg-neutral-100 rounded-full text-brand-navy hover:bg-neutral-200"
-                                    >
-                                        <span>User</span>
-                                        <svg width="12" height="12" fill="currentColor" className={twMerge("transition-transform", dropdownOpen && "rotate-180")} viewBox="0 0 24 24">
-                                            <path d="M7 10l5 5 5-5z"></path>
-                                        </svg>
-                                    </button>
-
-                                    {/* Dropdown Menu */}
-                                    {dropdownOpen && (
-                                        <div className="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg overflow-hidden border border-neutral-200">
-                                            <Link
-                                                href="/auth/profile"
-                                                className="block px-4 py-2 text-brand-navy hover:bg-neutral-100"
-                                                onClick={() => setDropdownOpen(false)}
-                                            >
-                                                Profile
-                                            </Link>
-                                            <Link
-                                                href="/auth/news"
-                                                className="block px-4 py-2 text-brand-navy hover:bg-neutral-100"
-                                                onClick={() => setDropdownOpen(false)}
-                                            >
-                                                Newsletter
-                                            </Link>
-                                            <button
-                                                onClick={handleLogout}
-                                                className="block w-full text-left px-4 py-2 text-brand-navy hover:bg-neutral-100"
-                                            >
-                                                Logout
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                                )}
+                                <Button variant="primary" className="hidden md:inline-flex items-center transition-colors">
+                                    <Link href={"/contact"}>Get Started</Link>
+                                </Button>
                             </div>
                         </div>
 
@@ -178,29 +107,9 @@ export default function Navbar() {
                                             </motion.a>
                                         ))}
 
-                                        {/* Mobile User Dropdown */}
-                                        {isAuthenticated ? (
-                                            <div className="flex flex-col items-center gap-4">
-                                                <Link href="/auth/profile" className="text-brand-navy font-medium">
-                                                Profile
-                                                </Link>
-                                                <button
-                                                onClick={handleLogout}
-                                                className="bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600"
-                                                >
-                                                Logout
-                                                </button>
-                                            </div>
-                                        ) : (
-                                        <div className="flex-none space-x-4 md:space-x-0 md:flex">
-                                            <Button variant="secondary">
-                                                <Link href={"/login"}>Login</Link>
-                                            </Button>
-                                            <Button variant="primary">
-                                                <Link href={"/register"}>Sign Up</Link>
-                                            </Button>
-                                        </div>
-                                        )}
+                                        <Button variant="primary">
+                                            <Link href={"/contact"}>Get Started</Link>
+                                        </Button>
                                     </div>
                                 </motion.div>
                             )}
