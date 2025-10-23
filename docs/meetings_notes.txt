@@ -1,0 +1,120 @@
+ FATHOM
+Meeting with Ken
+Cristian P. / Asha - Website Sync
+October 21, 2025  •  29 mins  •  View Meeting or Ask Fathom
+Action Items ✨
+		
+Email Asha Figma, codebase, inspiration links
+Cristian Prodius
+		
+Email Cristian (Ken) messaging/playbook, 'Plug SASE Everywhere' memo, SEO refs, meeting notes, HubSpot LPs
+Asha Kalyur
+		
+Start free trial of ZenConsole
+Cristian Prodius
+		
+Update site: remove OpenSense; move Personal Pricing; add Solutions nav; rename Platform; hide Personal Pricing
+Cristian Prodius
+Meeting Summary ✨
+General Template Customize   •  Change Template
+Meeting Purpose
+
+Review a website draft and align on the new B2B marketing strategy.
+Key Takeaways
+
+    Strategic Pivot: The company is shifting from B2C to a B2B focus on SASE for mid-market clients, making the current website obsolete.
+
+    New Messaging: The core message is a "purpose-built, single-stack SASE solution" that is simple to deploy (minutes vs. months) and performs inspection on the endpoint to avoid cloud-POP-related outages.
+
+    Website Architecture: The public homepage will be SASE-focused. B2C and other segments will be served by private landing pages for targeted marketing campaigns, preserving the B2B brand.
+
+    Action Plan: Ken will revise the draft using new materials (sales playbook, messaging) from Asha, who will also share HubSpot landing pages for feedback.
+
+Topics
+Strategic Pivot: B2C → B2B SASE
+
+    The company is pivoting from a B2C/practitioner focus to a B2B SASE platform for mid-market clients.
+
+    Target Audience: Mid-market organizations (1–5 person IT teams) with distributed employees (remote, travel, multiple offices).
+
+    Key Pain Points:
+
+        Need for a simple, fast-to-deploy SASE solution (minutes, not months).
+
+        Buyers may not know "SASE" but understand network security and access problems.
+
+    Brand Messaging:
+
+        Differentiator: A purpose-built, single-stack SASE solution, unlike competitors (Palo Alto, Zscaler) who stitch together acquisitions.
+
+        Performance: Endpoint inspection reduces latency and prevents outages, unlike cloud-POP-dependent models that can force users to bypass security (e.g., during the recent AWS issue).
+
+        New Tagline: "Plug SASE Everywhere" will replace "Plug & Secure" to better reflect the platform's value and avoid B2C connotations.
+
+Website Draft Review & Feedback
+
+    Ken's draft, a light-theme landing page built in ~8 hours, was reviewed.
+
+    Goal: Collect emails for marketing.
+
+    Feedback:
+
+        Theme: Light theme is approved; dark themes may be used for specific landing pages.
+
+        CTA: The CTA must change from email collection to driving SASE trial sign-ups.
+
+        Content: The draft is a good starting point but needs to be rewritten with the new B2B messaging.
+
+Technical & SEO Audit
+
+    The current website has poor SEO structure, which hurts search ranking.
+
+    Key Issues:
+
+        Semantic HTML errors (e.g., <p> tags styled as headers instead of <h1>).
+
+        Missing accessibility features.
+
+    Ken will provide a full list of technical SEO issues.
+
+Proposed Website Architecture
+
+    A multi-page architecture will serve all audiences while maintaining a strong B2B SASE brand.
+
+    Public Homepage (zenarmer.com):
+
+        Focus: Exclusively on the SASE platform.
+
+        Navigation:
+
+            Platform → Our Story, Architecture
+
+            Solutions → SASE, ZTNA, SSE
+
+        Pricing: Only show B2B SASE/SSE plans.
+
+    Private Landing Pages:
+
+        Purpose: Serve specific audiences (B2C, Next-Gen Firewall) via targeted marketing campaigns.
+
+        Access: Only via direct links (email, ads); not discoverable on the public site.
+
+        Current Use: Three HubSpot landing pages exist for mid-market verticals (healthcare, insurance, finance).
+
+Next Steps
+
+    Asha:
+
+        Share the sales playbook, messaging guide, and "Plug SASE Everywhere" memo.
+
+        Share the HubSpot landing pages with Ken and Cristian.
+
+        Send meeting notes to Ken.
+
+    Ken:
+
+        Revise the website draft using the new materials.
+
+        Send the updated draft and the Figma file to Asha.
+
+        Provide the list of technical SEO issues from the current site.

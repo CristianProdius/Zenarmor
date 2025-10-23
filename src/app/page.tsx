@@ -1,4 +1,7 @@
 import CallToAction from "@/sections/CallToAction";
+import CaseStudyShowcase from "@/sections/CaseStudyShowcase";
+import ComparisonWidget from "@/sections/ComparisonWidget";
+import DemoSandbox from "@/sections/DemoSandbox";
 import Faqs from "@/sections/Faqs";
 import Features from "@/sections/Features";
 import Hero from "@/sections/Hero";
@@ -8,18 +11,18 @@ import LogoTicker from "@/sections/LogoTicker";
 import Support from "@/sections/Support";
 
 export const metadata = {
-    title: "Zenarmor - Next-Generation Cybersecurity Solutions",
-    description: "Advanced packet inspection technology ensuring maximum protection with minimal overhead. Trusted by 13.5K+ deployments worldwide across OPNsense, pfSense, FreeBSD, and more.",
+    title: "Zenarmor - Purpose-Built Single-Stack SASE for Mid-Market",
+    description: "Deploy SASE in minutes, not months. Built for 1-5 person IT teams managing distributed workforces. Endpoint-based architecture that works even when cloud POPs fail. Trusted by 13.5K+ mid-market deployments.",
     openGraph: {
         type: "website",
         locale: "en_US",
         url: "https://zenarmor.com/",
-        title: 'Zenarmor - Next-Generation Cybersecurity Solutions',
-        description: 'Advanced packet inspection technology ensuring maximum protection with minimal overhead. Safeguarding networks across the globe with seamless deployment and intuitive management.',
+        title: 'Zenarmor - Purpose-Built Single-Stack SASE for Mid-Market',
+        description: 'Deploy SASE in minutes, not months. Built for 1-5 person IT teams managing distributed workforces. Endpoint-based architecture that works even when cloud POPs fail.',
         images: [
             {
                 url: 'https://zenarmor.com/og-image.jpg',
-                alt: 'Zenarmor - Next-Generation Cybersecurity Solutions',
+                alt: 'Zenarmor - Purpose-Built Single-Stack SASE for Mid-Market',
             }
         ],
     },
@@ -31,7 +34,10 @@ export default function Home() {
             <Hero />
             <LogoTicker />
             <Introduction />
+            <ComparisonWidget />
+            <DemoSandbox />
             <Features />
+            <CaseStudyShowcase />
             <Integrations />
             <Faqs />
             <CallToAction />

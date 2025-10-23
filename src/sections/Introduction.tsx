@@ -5,7 +5,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-const text = `Traditional security solutions slow you down with complex deployments and steep learning curves.`;
+const text = `Most SASE vendors require months of deployment and stitch together acquisitions into fragile architectures.`;
 const words = text.split(" ");
 
 export default function Introduction() {
@@ -29,7 +29,7 @@ export default function Introduction() {
                         <Tag className="mb-4">Introducing Zenarmor</Tag>
                     </div>
                     <div className="text-center text-4xl md:text-6xl lg:text-7xl font-medium mt-8">
-                        <span className="text-brand-navy">Security shouldn&apos;t be complicated.</span>{" "}
+                        <span className="text-brand-navy">SASE shouldn&apos;t take months.</span>{" "}
                         <span className="">
                             {words.map((word, wordIndex) => (
                                 <span key={wordIndex} className={twMerge("transition duration-500 text-neutral-300", wordIndex < currentWord && "text-brand-navy")}>
@@ -37,7 +37,7 @@ export default function Introduction() {
                                 </span>
                             ))}
                         </span>
-                        <span className="text-brand-mustard block">Plug & Secure. Anywhere, Anytime.</span>
+                        <span className="text-brand-mustard block">Plug SASE Everywhere.</span>
                     </div>
                 </div>
 
